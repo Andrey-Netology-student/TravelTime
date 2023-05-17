@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewDeparture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/city_of_departure"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/editTextDeparture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewDeparture"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:hint="@string/input_city_of_departure"
+        android:minHeight="48dp"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/textViewArrival"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/city_of_arrival"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_below="@+id/editTextDeparture"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <EditText
+        android:id="@+id/editTextArrival"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewArrival"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:hint="@string/input_city_of_arrival"
+        android:minHeight="48dp"
+        android:inputType="text" />
+
+        <Button
+        android:id="@+id/departureDateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date_of_departure"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_below="@+id/editTextArrival"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <DatePicker
+        android:id="@+id/departureDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minDate="@{System.currentTimeMillis()}"
+        android:maxDate="@{MainActivity.maxDate}"
+        android:layout_below="@+id/departureDateButton"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:hint="@string/input_date_of_departure"
+        android:minHeight="48dp" />
+
+        <Button
+            android:id="@+id/returnDateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/input_date_of_return"
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_below="@+id/departureDate"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp" />
+
+    <DatePicker
+        android:id="@+id/returnDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minDate="@{MainActivity.minDate}"
+        android:maxDate="@{MainActivity.maxDate}"
+        android:layout_below="@+id/returnDateButton"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:hint="@string/input_date_of_return"
+        android:minHeight="48dp" />
+
+    <TextView
+        android:id="@+id/textViewPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/price_in_rubles"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_below="@+id/returnDate"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/TextPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewPrice"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/price"
+        android:minHeight="48dp" />
+
+    <ImageButton
+        android:id="@+id/likeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextPrice"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/like_button_selector"
+        app:srcCompat="@drawable/like_off_24" />
+
+    <Button
+        android:id="@+id/switchingSecondActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TextPrice"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:text="@string/flight_history" />
+
+</RelativeLayout>
+    </ScrollView>

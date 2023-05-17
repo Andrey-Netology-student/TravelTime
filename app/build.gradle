@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.andrey.traveltime'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.andrey.traveltime"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildscript {
+        ext.kotlin_version = '1.8'
+    }
+}
+
+def ktx_version = "1.10.1"
+def appcompat_version = "1.6.1"
+def constraintlayout_version = "2.1.4"
+def material_version = "1.9.0"
+def retrofit_version = "2.9.0"
+
+def junit_version = "4.13.2"
+def ext_junit_version = "1.1.5"
+def espresso_core_version = "3.5.1"
+def viewmodel_version = "2.6.1"
+def fragment_ktx_version = "1.5.7"
+//def _version = ""
+
+dependencies {
+    implementation "androidx.core:core-ktx:$ktx_version"
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "com.google.android.material:material:$material_version"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$viewmodel_version"
+    implementation "androidx.fragment:fragment-ktx:$fragment_ktx_version"
+
+    testImplementation "junit:junit:$junit_version"
+    androidTestImplementation "androidx.test.ext:junit:$ext_junit_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_core_version"
+}

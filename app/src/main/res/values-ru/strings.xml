@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Пора в путешествие</string>
+    <string name="city_of_departure">Город отправления:</string>
+    <string name="input_city_of_departure">Введите город отправления</string>
+    <string name="city_of_arrival">Город прибытия:</string>
+    <string name="input_city_of_arrival">Введите город прибытия</string>
+    <string name="date_of_departure">Дата отправления:</string>
+    <string name="input_date_of_departure">Введите дату отправления</string>
+    <string name="date_of_return">Дата возвращения:</string>
+    <string name="input_date_of_return">Введите дату возвращения</string>
+    <string name="price_in_rubles">Цена в рублях:</string>
+    <string name="price">10_000 рублей</string>
+    <string name="flight_history">История полётов</string>
+
+    <string name="back_button">Вернуться</string>
+</resources>

@@ -1,0 +1,16 @@
+<resources>
+<string name="app_name">Time to Travel</string>
+    <string name="city_of_departure">City of departure:</string>
+    <string name="input_city_of_departure">Enter city of departure</string>
+    <string name="city_of_arrival">City of arrival:</string>
+    <string name="input_city_of_arrival">Enter city of arrival</string>
+    <string name="date_of_departure">Departure date:</string>
+    <string name="input_date_of_departure">Enter departure date</string>
+    <string name="date_of_return">Return date:</string>
+    <string name="input_date_of_return">Enter return date</string>
+    <string name="price_in_rubles">Price in rubles:</string>
+    <string name="price">10,000 rubles</string>
+    <string name="flight_history">Flight history</string>
+
+    <string name="back_button">Back</string>
+</resources>
